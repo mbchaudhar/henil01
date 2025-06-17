@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Signup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="loginPage">
+  <h2>Login</h2>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" id="loginEmail" placeholder="Enter email">
+    <div class="error" id="loginEmailError"></div>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" id="loginPassword" placeholder="Enter password">
+  </div>
+  <div class="form-group checkbox">
+    <input type="checkbox" id="rememberMe">
+    <label for="rememberMe">Remember me</label>
+  </div>
+  <button onclick="login()">Login</button>
+  <div class="toggle" onclick="toggleForm('signupPage')">Don't have an account? Sign Up</div>
+</div>
+
+<div class="container" id="signupPage" style="display:none;">
+  <h2>Signup</h2>
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="signupName" placeholder="Enter name">
+    <div class="error" id="signupNameError"></div>
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" id="signupEmail" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" id="signupPassword" placeholder="Enter password">
+  </div>
+  <button onclick="signup()">Sign Up</button>
+  <div class="toggle" onclick="toggleForm('loginPage')">Already have an account? Login</div>
+</div>
+
+<script src="01.js"></script>
+
+</body>
+</html>
